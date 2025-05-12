@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ሃገረኛ ፊልሞች - የአማርኛ ፊልሞች ድህረ ገጽ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ሃገረኛ ፊልሞች</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">መነሻ</a></li>
+                    <li><a href="#new-movies">አዲስ ፊልሞች</a></li>
+                    <li><a href="#catalog">መዝገብ</a></li>
+                    <li><a href="#contact">አግኙን</a></li>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <button id="dark-mode-toggle" aria-label="የጨለማ ሁነታ">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="mobile-menu-toggle" aria-label="#">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#home" class="active">መነሻ</a></li>
+            <li><a href="#new-movies">አዲስ ፊልሞች</a></li>
+            <li><a href="#catalog">መዝገብ</a></li>
+            <li><a href="#contact">አግኙን</a></li>
+        </ul>
+    </div>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>እንኳን ወደ ሃገረኛ ፊልሞች በደህና መጡ</h2>
+                <p>የኢትዮጵያ ምርጥ ፊልሞችን በነፃ ይመልከቱ</p>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="ፊልም ይፈልጉ...">
+                    <button id="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="movies">
+            <div class="container">
+                <h2 class="section-title">ተወዳጅ ፊልሞች</h2>
+                <div class="movie-grid" id="movie-grid">
+                    <!-- Movies will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="new-movies" class="new-movies">
+            <div class="container">
+                <h2 class="section-title">አዲስ ፊልሞች</h2>
+                <p class="section-description">በቅርቡ የተጨመሩ አዲስ ፊልሞች</p>
+                <div class="movie-slider">
+                    <div class="slider-container" id="new-movies-slider">
+                        <!-- New movies will be populated by JavaScript -->
+                    </div>
+                    <button class="slider-arrow prev" id="slider-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-arrow next" id="slider-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalog" class="catalog">
+            <div class="container">
+                <h2 class="section-title">የፊልም መዝገብ</h2>
+                <p class="section-description">ፊልሞችን በዓይነት ይፈልጉ</p>
+                
+                <div class="catalog-filters">
+                    <button class="filter-btn active" data-filter="all">ሁሉም</button>
+                    <button class="filter-btn" data-filter="comedy">ኮሜዲ</button>
+                    <button class="filter-btn" data-filter="drama">ድራማ</button>
+                    <button class="filter-btn" data-filter="romance">ፍቅር</button>
+                    <button class="filter-btn" data-filter="action">አክሽን</button>
+                </div>
+                
+                <div class="movie-grid" id="catalog-grid">
+                    <!-- Catalog movies will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">አግኙን</h2>
+                <p class="section-description">ለማንኛውም ጥያቄ ወይም አስተያየት ይጻፉልን</p>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>አዲስ አበባ, ኢትዮጵያ</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+251 91 234 5678</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@hagerefilms.com</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">ሙሉ ስም</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">ኢሜይል</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">ርዕሰ ጉዳይ</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">መልዕክት</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">ላክ</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title"></h3>
+                <button id="close-modal">&times;</button>
+            </div>
+            <div class="video-container">
+                <video id="video-player" controls>
+                    <source src="" type="video/mp4">
+                    የእርስዎ ብራውዘር ቪዲዮን አይደግፍም።
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>ሃገረኛ ፊልሞች</h2>
+                    <p>የኢትዮጵያ ምርጥ ፊልሞችን በነፃ ይመልከቱ</p>
+                </div>
+                <div class="footer-links">
+                    <h3>ፈጣን ማገናኛዎች</h3>
+                    <ul>
+                        <li><a href="#home">መነሻ</a></li>
+                        <li><a href="#new-movies">አዲስ ፊልሞች</a></li>
+                        <li><a href="#catalog">መዝገብ</a></li>
+                        <li><a href="#contact">አግኙን</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>ዜናዎችን ይቀበሉ</h3>
+                    <p>ስለ አዲስ ፊልሞች ለማወቅ ኢሜይልዎን ያስገቡ</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="ኢሜይልዎን ያስገቡ" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ሃገረኛ ፊልሞች - ሁሉም መብቶች የተጠበቁ ናቸው</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
